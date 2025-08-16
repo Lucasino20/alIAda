@@ -4,9 +4,7 @@ from openai import OpenAI
 import time
 
 # Inicializa el cliente
-client = OpenAI(api_key="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")
-
-# Tu agente de Platform AI
+client = OpenAI(api_key="")
 assistant_id = "asst_j8TbTUFMM2B11EGmsJy9rC3T"
 
 # Diccionario en memoria para mantener threads por usuario (ejemplo simple)
@@ -66,3 +64,4 @@ async def send_message(user_id: str = Form(...), user_input: str = Form(...)):
             return {"respuesta": msg.content[0].text.value}
 
     return {"respuesta": None}
+
